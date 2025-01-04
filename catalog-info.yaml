@@ -2,6 +2,9 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: "abc"
+  annotations:
+    backstage.io/kubernetes-namespace: default
+    backstage.io/kubernetes-id: abc
 spec:
   type: service
   owner: user:guest
