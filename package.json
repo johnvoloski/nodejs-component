@@ -1,5 +1,10 @@
 {
   "name": "abc",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/johnvoloski/abc.git",
+  "author": "John Voloski <johnvoloski@cwi.com.br>",
+  "license": "MIT"
 }
