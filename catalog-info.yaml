@@ -5,6 +5,7 @@ metadata:
   annotations:
     backstage.io/kubernetes-namespace: default
     backstage.io/kubernetes-id: abc
+    sonarqube.org/project-key: default/abc
 spec:
   type: service
   owner: user:guest
