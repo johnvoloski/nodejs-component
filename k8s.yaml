@@ -16,6 +16,9 @@ metadata:
   name: nodejs-component
   labels:
     backstage.io/kubernetes-id: nodejs-component
+    tags.datadoghq.com/env: production
+    tags.datadoghq.com/service: nodejs-component
+    tags.datadoghq.com/version: "0.0.1"
 spec:
   replicas: 1
   selector:
@@ -26,13 +29,30 @@ spec:
       labels:
         app: nodejs-component
         backstage.io/kubernetes-id: nodejs-component
-    spec:
+        tags.datadoghq.com/env: production
+        tags.datadoghq.com/service: nodejs-component
+        tags.datadoghq.com/version: "0.0.1"
+        admission.datadoghq.com/enabled: "true"
+      annotations:
+        admission.datadoghq.com/js-lib.version: v5.30.0
+    spec:  
       containers:
       - name: nodejs-component
-        image: johnvoloski/nodejs-component
+        image: johnvoloski/nodejs-component:master
         imagePullPolicy: Always
         ports:
           - containerPort: 4000
+        env:
+          - name: DD_AGENT_HOST
+            valueFrom:
+              fieldRef:
+                fieldPath: status.hostIP
+          - name: DD_ENV
+            value: production
+          - name: DD_LOGS_INJECTION
+            value: "true"
+          - name: DD_TRACE_STARTUP_LOGS
+            value: "true"
         resources:
           limits:
             cpu: 250m
