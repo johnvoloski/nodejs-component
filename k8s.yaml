@@ -1,3 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-component-service  
+spec:
+  selector:
+    app: nodejs-component
+  ports:
+    - port: 80
+      targetPort: 4000
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -5,7 +17,7 @@ metadata:
   labels:
     backstage.io/kubernetes-id: nodejs-component
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: nodejs-component
@@ -19,6 +31,8 @@ spec:
       - name: nodejs-component
         image: johnvoloski/nodejs-component
         imagePullPolicy: Always
+        ports:
+          - containerPort: 4000
         resources:
           limits:
             cpu: 250m

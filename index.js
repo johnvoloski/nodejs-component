@@ -6,6 +6,8 @@ const app = express();
 const port = process.env.PORT || 4000;
 
 app.get('/', (req, res) => {
+  console.log(req);
+  
   res.status(200).send({
     success: true,
     message: 'Working',
