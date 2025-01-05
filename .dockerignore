@@ -1,0 +1,6 @@
+node_modules
+.sonar
+catalog-info.yaml
+k8s.yaml
+pipeline.yaml
+sonar-sonar-project.properties
