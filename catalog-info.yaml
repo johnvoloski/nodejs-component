@@ -3,6 +3,7 @@ kind: Component
 metadata:
   name: "nodejs-component"
   annotations:
+    github.com/project-slug: johnvoloski/nodejs-component
     backstage.io/kubernetes-namespace: default
     backstage.io/kubernetes-id: nodejs-component
     sonarqube.org/project-key: default/nodejs-component
