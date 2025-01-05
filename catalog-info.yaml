@@ -7,6 +7,7 @@ metadata:
     backstage.io/kubernetes-namespace: default
     backstage.io/kubernetes-id: nodejs-component
     sonarqube.org/project-key: 'default/nodejs-component'
+    datadoghq.com/site: us5.datadoghq.com
 spec:
   type: service
   owner: user:johnvoloski
