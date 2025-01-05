@@ -1,11 +1,11 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: "abc"
+  name: "nodejs-component"
   annotations:
     backstage.io/kubernetes-namespace: default
-    backstage.io/kubernetes-id: abc
-    sonarqube.org/project-key: default/abc
+    backstage.io/kubernetes-id: nodejs-component
+    sonarqube.org/project-key: default/nodejs-component
 spec:
   type: service
   owner: user:guest
