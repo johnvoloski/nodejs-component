@@ -9,5 +9,5 @@ metadata:
     sonarqube.org/project-key: 'default/nodejs-component'
 spec:
   type: service
-  owner: user:guest
+  owner: user:johnvoloski
   lifecycle: experimental
