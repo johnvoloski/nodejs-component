@@ -16,13 +16,9 @@ spec:
         backstage.io/kubernetes-id: nodejs-component
     spec:
       containers:
-      - name: ubuntu
-        image: ubuntu
-        command: 
-        - /bin/sh
-        args:
-        - -c
-        - "tail -f /dev/null"
+      - name: nodejs-component
+        image: johnvoloski/nodejs-component
+        imagePullPolicy: Always
         resources:
           limits:
             cpu: 250m
