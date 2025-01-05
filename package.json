@@ -1,10 +1,13 @@
 {
-  "name": "abc",
+  "name": "nodejs-component",
   "private": true,
+  "scripts": {
+    "sonar-scanner": "npx sonar-scanner -Dsonar.host.url=http://localhost:9000 -Dsonar.token=sqa_b2b95f74345a3c248090983e9ad625808d79f907"
+  },
   "dependencies": {},
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/johnvoloski/abc.git",
+  "repository": "https://github.com/johnvoloski/nodejs-component.git",
   "author": "John Voloski <johnvoloski@cwi.com.br>",
   "license": "MIT"
 }

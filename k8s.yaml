@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-component
+  labels:
+    backstage.io/kubernetes-id: nodejs-component
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nodejs-component
+  template:
+    metadata:
+      labels:
+        app: nodejs-component
+        backstage.io/kubernetes-id: nodejs-component
+    spec:
+      containers:
+      - name: ubuntu
+        image: ubuntu
+        command: 
+        - /bin/sh
+        args:
+        - -c
+        - "tail -f /dev/null"
+        resources:
+          limits:
+            cpu: 250m
+            memory: 128Mi
+          requests:
+            cpu: 250m
+            memory: 128Mi
